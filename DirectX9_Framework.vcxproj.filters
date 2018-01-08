@@ -49,9 +49,19 @@
     <Filter Include="MainGame\WinMain">
       <UniqueIdentifier>{ece9376a-a55c-4299-ab41-319a87d284ab}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MainGame\Unit">
+      <UniqueIdentifier>{445ad309-5122-4b48-82a4-15299c0b23da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MainGame\Unit\Character">
+      <UniqueIdentifier>{45718bbe-f957-432c-a5e0-47d4c2eb5fb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MainGame\Unit\Character\Yuuna">
+      <UniqueIdentifier>{49e58c67-c61d-4aa3-9d3a-9dc228545a91}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
+    <Text Include="용사부훈련소_기획.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ImageManager.h">
@@ -99,6 +109,15 @@
     <ClInclude Include="WinMain.h">
       <Filter>MainGame\WinMain</Filter>
     </ClInclude>
+    <ClInclude Include="Unit.h">
+      <Filter>MainGame\Unit</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>MainGame\Unit\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="CharYuuna.h">
+      <Filter>MainGame\Unit\Character\Yuuna</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ImageManager.cpp">
@@ -136,6 +155,15 @@
     </ClCompile>
     <ClCompile Include="WinMain.cpp">
       <Filter>MainGame\WinMain</Filter>
+    </ClCompile>
+    <ClCompile Include="Unit.cpp">
+      <Filter>MainGame\Unit</Filter>
+    </ClCompile>
+    <ClCompile Include="Character.cpp">
+      <Filter>MainGame\Unit\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="CharYuuna.cpp">
+      <Filter>MainGame\Unit\Character\Yuuna</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

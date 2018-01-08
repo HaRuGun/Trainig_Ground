@@ -19,18 +19,19 @@
 
 --------------------------------------------------------------------
 
-오브젝트
-	ㄴ 캐릭터
-	{
-		스테이터스
-		스테이터스 관리
+Unit
+{
+	unitStatus
+		- Method
+}
 
-	}
-		ㄴ 특정 캐릭터
+Character : Unit
+{
+	CHARACTER_TYPE
 
-몬스터
-	ㄴ 성설
-	ㄴ 버택스
-		ㄴ 특정 버택스
+	iPetalCount
+	bIsBloomed
+}
+Monster : Unit
 
 캐릭터 : 방향키 이동, Z 약공격, X 강공격, C 특수 행동, Crtl 각성
