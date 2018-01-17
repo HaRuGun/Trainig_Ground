@@ -1,10 +1,12 @@
 #pragma once
 #include "Scene.h"
 
+class CharYuuna;
+
 class SMain : public Scene
 {
 protected:
-	matrix mat;
+	CharYuuna *yuuna;
 
 public:
 

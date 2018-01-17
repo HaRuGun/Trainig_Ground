@@ -17,7 +17,6 @@ protected:
 	CHARACTER_TYPE eType;
 	
 	//Texture
-	string sTextureArray[5];
 	matrix mat;
 	frameData frame;
 

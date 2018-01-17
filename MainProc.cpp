@@ -26,15 +26,6 @@ int MainProc::Update(double deltaTime)
 	INPUTMANAGER->Update();
 	SCENEMANAGER->Update(deltaTime);
 
-	if (INPUTMANAGER->IsKeyDown('A'))
-	{
-		ChangeWindow(FULLSCREEN);
-	}
-
-	if (INPUTMANAGER->IsKeyDown('S'))
-	{
-		ChangeWindow(WINDOWED);
-	}
 	return 0;
 }
 

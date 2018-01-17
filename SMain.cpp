@@ -1,4 +1,7 @@
 #include "stdafx.h"
+
+#include "CharYuuna.h"
+
 #include "SMain.h"
 
 SMain::SMain()
@@ -11,10 +14,11 @@ SMain::~SMain()
 
 void SMain::Init() 
 {
-	IMAGEMANAGER->AddImage("MAIN", "./Texture/sprites.jpg");
 	SOUNDMANAGER->LoadSound("BFLY", "./Sound/03. Butterfly.mp3", BGM);
 	SOUNDMANAGER->LoadSound("PING", "./Sound/PING.wav", SE);
-	mat = { 0, 0, 0, 0, 0, 0 };
+
+	yuuna = new CharYuuna();
+	yuuna->Init();
 }
 
 void SMain::Update(double deltaTime)
@@ -26,14 +30,16 @@ void SMain::Update(double deltaTime)
 
 	if (INPUTMANAGER->IsKeyDown('C'))
 		SOUNDMANAGER->PlaySound("PING");
+
+	yuuna->Update(deltaTime);
 }
 
 void SMain::Render() 
 {
-	IMAGEMANAGER->DrawImage("MAIN", mat);
+	yuuna->Render();
 }
 
 void SMain::Release()
 {
-
+	yuuna->Release();
 }
