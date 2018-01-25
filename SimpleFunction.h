@@ -9,3 +9,7 @@ inline double radian(double degree)
 {
 	return degree * PI / 180;
 }
+
+#define SQUARE(a) (a * a)
+
+#define DISTANCE(aX, aY, bX, bY) sqrt(SQUARE(aX - bX) + SQUARE(aY - bY))

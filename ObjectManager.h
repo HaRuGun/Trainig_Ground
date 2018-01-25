@@ -25,9 +25,9 @@ public:
 	D3DXVECTOR2 offset;
 	float radius;
 
-	bool CheckCollision(const CircleCollider& col);
-	bool CheckCollision(const RectCollider& col);
-	bool CheckCollision(const LineCollider& col);
+	bool CheckCollision(const CircleCollider& col) const;
+	bool CheckCollision(const RectCollider& col) const;
+	bool CheckCollision(const LineCollider& col) const;
 
 	CircleCollider(D3DXVECTOR2& p, D3DXVECTOR2 off, float r)
 	: pos(p), offset(off), radius(r) {}
@@ -42,9 +42,9 @@ public:
 	D3DXVECTOR2 offset;
 	float width, height;
 
-	bool CheckCollision(const CircleCollider& col);
-	bool CheckCollision(const RectCollider& col);
-	bool CheckCollision(const LineCollider& col);
+	bool CheckCollision(const CircleCollider& col) const;
+	bool CheckCollision(const RectCollider& col) const;
+	bool CheckCollision(const LineCollider& col) const;
 
 	RectCollider(D3DXVECTOR2& p, D3DXVECTOR2 off, float w, float h)
 		: pos(p), offset(off), width(w), height(h) {}
@@ -58,9 +58,9 @@ public:
 	D3DXVECTOR2& posA;
 	D3DXVECTOR2& posB;
 
-	bool CheckCollision(const CircleCollider& col);
-	bool CheckCollision(const RectCollider& col);
-	bool CheckCollision(const LineCollider& col);
+	bool CheckCollision(const CircleCollider& col) const;
+	bool CheckCollision(const RectCollider& col) const;
+	bool CheckCollision(const LineCollider& col) const;
 
 	LineCollider(D3DXVECTOR2& pA, D3DXVECTOR2& pB)
 		: posA(pA), posB(pB) {}
