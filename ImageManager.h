@@ -31,9 +31,8 @@ class ImageManager : public Singleton<ImageManager>
 {
 private:
 	LPD3DXSPRITE lpd3dSprite;
-	
+
 	map<string, texture*> mapTexture;
-	
 
 	int Init();
 	int Release();
@@ -46,6 +45,7 @@ public:
 	void ResetDevice();
 
 	void AddImage(string key, LPCSTR lpPath);
+
 	void DrawImage(string key, matrix mat, int alpha = 255.0f);
 	void DrawFrameImage(string key, frameData frame, matrix mat, int alpha = 255.0f);
 
