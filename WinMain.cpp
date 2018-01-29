@@ -110,9 +110,9 @@ int WINAPI WinMain(HINSTANCE hInstance,
 			mainTime += deltaTime;
 			lastTime = curTime;
 
-			while (mainTime >= frame)
-			{
-				mainTime -= frame;
+			//while (mainTime >= frame)
+			//{
+				//mainTime -= frame;
 				
 				main.Update(deltaTime);
 				
@@ -131,7 +131,7 @@ int WINAPI WinMain(HINSTANCE hInstance,
 					lpd3dDevice->Reset(&main.MakeD3DPP(main.GetScreenMode()));
 					main.ResetDevice();
 				}
-			}
+			//}
 		}
 
 		if (msg.message == WM_QUIT)

@@ -58,6 +58,12 @@
     <Filter Include="MainGame\Unit\Character\Yuuna">
       <UniqueIdentifier>{49e58c67-c61d-4aa3-9d3a-9dc228545a91}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MainGame\Unit\Monster">
+      <UniqueIdentifier>{da69bc39-673a-43a2-978f-9e4497ad3a9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MainGame\Unit\Monster\Stardust">
+      <UniqueIdentifier>{1aace431-21e9-4108-a90b-bb6bb6c02392}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -118,6 +124,12 @@
     <ClInclude Include="CharYuuna.h">
       <Filter>MainGame\Unit\Character\Yuuna</Filter>
     </ClInclude>
+    <ClInclude Include="Monster.h">
+      <Filter>MainGame\Unit\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="StarDust.h">
+      <Filter>MainGame\Unit\Monster\Stardust</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ImageManager.cpp">
@@ -164,6 +176,12 @@
     </ClCompile>
     <ClCompile Include="CharYuuna.cpp">
       <Filter>MainGame\Unit\Character\Yuuna</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster.cpp">
+      <Filter>MainGame\Unit\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="StarDust.cpp">
+      <Filter>MainGame\Unit\Monster\Stardust</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

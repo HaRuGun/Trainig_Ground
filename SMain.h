@@ -2,11 +2,13 @@
 #include "Scene.h"
 
 class CharYuuna;
+class StarDust;
 
 class SMain : public Scene
 {
 protected:
 	CharYuuna *yuuna;
+	StarDust *star;
 
 public:
 

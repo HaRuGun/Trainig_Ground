@@ -1,6 +1,7 @@
 #include "stdafx.h"
 
 #include "CharYuuna.h"
+#include "StarDust.h"
 
 #include "SMain.h"
 
@@ -19,6 +20,9 @@ void SMain::Init()
 
 	yuuna = new CharYuuna();
 	yuuna->Init();
+
+	star = new StarDust();
+	star->Init();
 }
 
 void SMain::Update(double deltaTime)
@@ -32,14 +36,17 @@ void SMain::Update(double deltaTime)
 		SOUNDMANAGER->PlaySound("PING");
 
 	yuuna->Update(deltaTime);
+	star->Update(deltaTime);
 }
 
 void SMain::Render() 
 {
 	yuuna->Render();
+	star->Render();
 }
 
 void SMain::Release()
 {
 	yuuna->Release();
+	star->Release();
 }
