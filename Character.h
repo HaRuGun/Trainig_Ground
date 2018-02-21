@@ -1,24 +1,21 @@
 #pragma once
 #include "Unit.h"
 
-enum CHARACTER_TYPE
-{
-	YUUNA = 1,
-	TOGO,
-	HUU,
-	ITSUKI,
-	KARIN
-};
 
 class Character :
 	public Unit
 {
 protected:
-	CHARACTER_TYPE eType;
-	
-	//Texture
-	matrix mat;
-	frameData frame;
+	enum CHARACTER_TYPE
+	{
+		YUUNA = 1,
+		TOGO,
+		HUU,
+		ITSUKI,
+		KARIN
+	} eType;
+
+	Collider col;
 
 	int iPetalCount;
 	bool bIsBloomed;
@@ -29,7 +26,9 @@ public:
 	void Render();
 	void Release();
 
+	void SetCollider() {}
+	Collider GetCollider() { return col; }
+
 	Character() {}
 	virtual ~Character() {}
 };
-

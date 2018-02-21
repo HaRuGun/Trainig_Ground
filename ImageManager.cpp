@@ -92,7 +92,7 @@ void ImageManager::DrawImage(string key, matrix mat, int alpha)
 
 		D3DXMatrixScaling(&matS, mat.width, mat.height, 1);
 		D3DXMatrixRotationZ(&matR, D3DXToRadian(mat.direction));
-		D3DXMatrixTranslation(&matT, mat.x, mat.y, 0);
+		D3DXMatrixTranslation(&matT, mat.pos.x, mat.pos.y, 0);
 
 		matResult = matS * matR * matT;
 
@@ -123,7 +123,7 @@ void ImageManager::DrawFrameImage(string key, frameData frame, matrix mat, int a
 
 		D3DXMatrixScaling(&matS, mat.width, mat.height, 1);
 		D3DXMatrixRotationZ(&matR, D3DXToRadian(mat.direction));
-		D3DXMatrixTranslation(&matT, mat.x, mat.y, 0);
+		D3DXMatrixTranslation(&matT, mat.pos.x, mat.pos.y, 0);
 
 		matResult = matS * matR * matT;
 

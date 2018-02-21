@@ -8,7 +8,7 @@
 #include <windows.h>
 #include <crtdbg.h>
 
-// C
+// C or C++
 #include <stdlib.h>
 #include <malloc.h>
 #include <memory.h>
@@ -16,6 +16,7 @@
 #include <timeapi.h>
 #include <map>
 #include <vector>
+#include <random>
 
 #pragma comment(lib, "winmm.lib")
 #pragma comment(lib, "msimg32.lib")
@@ -34,6 +35,7 @@
 
 // Custom
 #include "SimpleFunction.h"
+
 #include "ImageManager.h"
 #include "InputManager.h"
 #include "TextManager.h"

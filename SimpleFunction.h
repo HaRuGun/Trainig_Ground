@@ -13,3 +13,12 @@ inline double radian(double degree)
 #define SQUARE(a) (a * a)
 
 #define DISTANCE(aX, aY, bX, bY) sqrt(SQUARE(aX - bX) + SQUARE(aY - bY))
+
+template<typename T>
+T RandomGeneratoer(T min, T max);
+
+template<>
+int RandomGeneratoer<int>(int min, int max);
+
+template<>
+double RandomGeneratoer<double>(double min, double max);

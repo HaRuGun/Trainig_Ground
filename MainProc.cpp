@@ -16,6 +16,7 @@ int MainProc::Init()
 	bAct = true;
 
 	SCENEMANAGER->Init();
+	ChangeWindow(WINDOWED);
 
 	return 0;
 }

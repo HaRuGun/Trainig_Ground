@@ -1,7 +1,7 @@
 #include "stdafx.h"
 
 #include "CharYuuna.h"
-#include "StarDust.h"
+#include "MonStardust.h"
 
 #include "SMain.h"
 
@@ -15,38 +15,50 @@ SMain::~SMain()
 
 void SMain::Init() 
 {
-	SOUNDMANAGER->LoadSound("BFLY", "./Sound/03. Butterfly.mp3", BGM);
-	SOUNDMANAGER->LoadSound("PING", "./Sound/PING.wav", SE);
-
 	yuuna = new CharYuuna();
 	yuuna->Init();
 
-	star = new StarDust();
-	star->Init();
+	for (int i = 5; 0 < i; --i)
+	{
+		MonStardust *dest = new MonStardust();
+		vecStar.push_back(dest);
+	}
+
+	for (auto& iter : vecStar)
+	{
+		iter->Init();
+
+		double destX = RandomGeneratoer<double>(0.0, SCREEN_WIDTH);
+		double destY = RandomGeneratoer<double>(0.0, SCREEN_HEIGHT);
+		iter->SetPosition(D3DXVECTOR2(destX, destY));
+
+		iter->SetChar(yuuna);
+	}
 }
 
 void SMain::Update(double deltaTime)
 {
-	if (INPUTMANAGER->IsKeyDown('Z'))
-		SOUNDMANAGER->PlaySound("BFLY");
-	if (INPUTMANAGER->IsKeyDown('X'))
-		SOUNDMANAGER->StopSound("BFLY");
-
-	if (INPUTMANAGER->IsKeyDown('C'))
-		SOUNDMANAGER->PlaySound("PING");
-
 	yuuna->Update(deltaTime);
-	star->Update(deltaTime);
+	for (auto& iter : vecStar)
+	{
+		iter->Update(deltaTime);
+	}
 }
 
 void SMain::Render() 
 {
 	yuuna->Render();
-	star->Render();
+	for (auto& iter : vecStar)
+	{
+		iter->Render();
+	}
 }
 
 void SMain::Release()
 {
 	yuuna->Release();
-	star->Release();
+	for (auto& iter : vecStar)
+	{
+		iter->Release();
+	}
 }

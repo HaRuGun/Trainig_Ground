@@ -2,13 +2,13 @@
 #include "Scene.h"
 
 class CharYuuna;
-class StarDust;
+class MonStardust;
 
 class SMain : public Scene
 {
 protected:
 	CharYuuna *yuuna;
-	StarDust *star;
+	vector<MonStardust*> vecStar;
 
 public:
 

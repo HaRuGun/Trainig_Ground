@@ -6,7 +6,6 @@ struct unitStatus
 	float fHp, fAtk, fDef;
 };
 
-
 class Unit :
 	public Object
 {

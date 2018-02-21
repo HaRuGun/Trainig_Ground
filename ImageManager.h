@@ -13,8 +13,8 @@ struct texture
 struct matrix
 {
 public:
+	D3DXVECTOR2 pos;
 	float width, height;
-	float x, y;
 	float velocity, direction;
 };
 

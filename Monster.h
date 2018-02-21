@@ -1,29 +1,32 @@
 #pragma once
 #include "Unit.h"
 
-enum MONSTER_TYPE
-{
-	STARDUST = 1,
-	VERTEX
-};
 
 class Monster :
 	public Unit
 {
 protected:
-	MONSTER_TYPE eType;
+	enum MONSTER_TYPE
+	{
+		STARDUST = 1,
+		VERTEX
+	} eType;
 	float fHate;
 
 	matrix mat;
 	frameData frame;
+
+	Collider col;
 
 public:
 	void Init();
 	void Update(double deltaTime);
 	void Render();
 	void Release();
-	
+
+	void SetCollider() {}
+	Collider GetCollider() { return col; }
+
 	Monster() {}
 	virtual ~Monster() {}
 };
-

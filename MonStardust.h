@@ -1,11 +1,15 @@
 #pragma once
 #include "Monster.h"
-class StarDust :
+class Character;
+
+class MonStardust :
 	public Monster
 {
 private:
 	float fYMove;
 	int iYMoveCount;
+
+	Character* pChar;
 
 public:
 	void Init();
@@ -13,9 +17,14 @@ public:
 	void Render();
 	void Release();
 
+	void SetPosition(D3DXVECTOR2 pos);
+
 	void MoveY(double deltaTime);
 
-	StarDust() {}
-	virtual ~StarDust() {}
+	void SetCollider();
+	void SetChar(Character * p) { pChar = p; }
+
+	MonStardust() {}
+	virtual ~MonStardust() {}
 };
 

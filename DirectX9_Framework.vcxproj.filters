@@ -127,7 +127,7 @@
     <ClInclude Include="Monster.h">
       <Filter>MainGame\Unit\Monster</Filter>
     </ClInclude>
-    <ClInclude Include="StarDust.h">
+    <ClInclude Include="MonStardust.h">
       <Filter>MainGame\Unit\Monster\Stardust</Filter>
     </ClInclude>
   </ItemGroup>
@@ -180,8 +180,11 @@
     <ClCompile Include="Monster.cpp">
       <Filter>MainGame\Unit\Monster</Filter>
     </ClCompile>
-    <ClCompile Include="StarDust.cpp">
+    <ClCompile Include="MonStardust.cpp">
       <Filter>MainGame\Unit\Monster\Stardust</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleFunction.cpp">
+      <Filter>Window</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -105,10 +105,10 @@ bool RectCollider::CheckCollision(const LineCollider & col) const
 	LineCollider lineTop(D3DXVECTOR2(fLeft, fTop), D3DXVECTOR2(fRight, fTop));
 	LineCollider lineLeft(D3DXVECTOR2(fLeft, fTop), D3DXVECTOR2(fLeft, fBottom));
 	LineCollider lineRight(D3DXVECTOR2(fRight, fTop), D3DXVECTOR2(fRight, fBottom));
-	LineCollider lineBottom(D3DXVECTOR2(fLeft, fBottom), D3DXVECTOR2(fRight, fBottom));
+	LineCollider* lineBottom = new LineCollider(D3DXVECTOR2(fLeft, fBottom), D3DXVECTOR2(fRight, fBottom));
 
 	return lineTop.CheckCollision(col) || lineLeft.CheckCollision(col) ||
-		lineRight.CheckCollision(col) || lineBottom.CheckCollision(col);
+		lineRight.CheckCollision(col) || lineBottom->CheckCollision(col);
 		
 	return ((fLeft <= col.posA.x && col.posA.x <= fRight && 
 		fTop <= col.posA.y && col.posA.y <= fBottom) && 
@@ -147,5 +147,30 @@ bool LineCollider::CheckCollision(const LineCollider & col) const
 	if (1 < u && 1 < v)
 		return false;
 
+	return false;
+}
+
+bool Collider::CheckCollision(const CircleCollider & col) const
+{
+	return false;
+}
+
+bool Collider::CheckCollision(const RectCollider & col) const
+{
+	return false;
+}
+
+bool Collider::CheckCollision(const LineCollider & col) const
+{
+	return false;
+}
+
+bool Collider::CheckCollision(const Collider& col) const
+{
+	for (auto& thisCol : colliderList)
+	{
+		for (auto& otherCol : col.colliderList)
+			if (thisCol->CheckCollision(*otherCol)) return true;
+	}	
 	return false;
 }
